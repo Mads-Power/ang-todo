@@ -1,0 +1,1 @@
+followed this sources: https://medium.com/weekly-webtips/simple-to-do-list-in-angular-247cdad31280

@@ -1,0 +1,54 @@
+<div class=" p-3 mb-2 bg-light text-dark ">
+  <div class="row  justify-content-md-center">
+  <h1 style="text-align: center;">THE Todo-list</h1>
+
+<div>
+ <button type="button" class="btn btn-primary" (click)="addTask()">Add Task</button>
+</div>
+
+<ul class="list-group" *ngFor="let task of taskList; let i = index">
+ <li class="list-group-item" >
+   <div class="row">
+
+     <div class="container">
+       <div class="row">
+         <div class="col-sm pb-2">
+           <button class="btn btn-warning" (click)="removeTask(i)"> Remove task</button>
+         </div>
+         <div class="col-sm ">
+           <input class="form-check-input me-1" type="checkbox">
+           Task Completed
+         </div>
+         <div class="col-sm">
+           <button class="btn btn-info"> Rename</button>
+         </div>
+       </div>
+     </div>
+     
+
+    <div class="alert alert-info m-1" role="alert">
+     Task number: {{i +1}}
+    </div>
+   
+ </div>
+<div class="container">
+  <div class="row">
+   <div class=" col-sm">
+    <span > Title: </span>
+    <input [(ngModel)]="task.title" type="text">
+  </div>
+  <div class="w-100"></div>
+  
+   <div class=" col-sm">
+     <span> Description </span>
+     <input [(ngModel)]="task.description" type="text">
+   </div>
+   </div>
+ </div>
+
+ </li>
+</ul>
+</div>
+</div>
+
+
